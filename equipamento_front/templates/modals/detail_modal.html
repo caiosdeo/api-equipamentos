@@ -1,0 +1,9 @@
+{% extends './base_modal.html' %}
+
+{% block modal-title%}
+    Visualizar equipamento
+{% endblock %}
+
+{% block modal-body%}
+    {% include 'partials/_form.html' with disabled=True form_id="view-equipamento-form" %}
+{% endblock %}     

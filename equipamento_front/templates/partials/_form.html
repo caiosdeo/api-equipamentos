@@ -1,0 +1,36 @@
+<form id="{{ form_id }}">
+    <input type="text" id="equipamento_id" name="equipamento_id" hidden>
+    <div class="form-group">
+        <label for="tipo">Tipo</label>
+        <input type="text" class="form-control" id="tipo" name="tipo" {% if disabled %}readonly{% endif %} required>
+    </div>
+    
+    <div class="form-group">
+        <label for="fabricante">Fabricante</label>
+        <input type="text" class="form-control" id="fabricante" name="fabricante" {% if disabled %}readonly{% endif %} required>
+    </div>
+    
+    <div class="form-group">
+        <label for="modelo">Modelo</label>
+        <input type="text" class="form-control" id="modelo" name="modelo" {% if disabled %}readonly{% endif %} required>
+    </div>
+    
+    <div class="form-group">
+        <label for="numero_de_serie">Número de Série</label>
+        <input type="text" class="form-control" id="numero_de_serie" name="numero_de_serie" {% if disabled %}readonly{% endif %} required>
+    </div>
+    
+    <div class="form-group">
+        <label for="data_de_compra">Data de Compra</label>
+        <input type="date" class="form-control" id="data_de_compra" name="data_de_compra" {% if disabled %}readonly{% endif %}>
+    </div>
+    
+    <div class="form-group">
+        <label for="valor_de_compra">Valor de Compra</label>
+        <input type="number" step="0.01" class="form-control" id="valor_de_compra" name="valor_de_compra" {% if disabled %}readonly{% endif %}>
+    </div>
+
+    {% if not disabled %}
+    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Salvar</button>
+    {% endif %}
+</form>

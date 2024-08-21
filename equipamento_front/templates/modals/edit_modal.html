@@ -1,0 +1,9 @@
+{% extends './base_modal.html' %}
+
+{% block modal-title%}
+    Editar equipamento
+{% endblock %}
+
+{% block modal-body%}
+    {% include 'partials/_form.html' with form_id="edit-equipamento-form"%}
+{% endblock %}

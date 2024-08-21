@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block page-title %}
+    Home -
+{% endblock %}
+
+{% block content %}
+
+    {% include 'partials/_table.html' %}
+
+    {% include 'modals/message_modal.html' with modal_id="messageModal" %}
+
+    {% include 'modals/add_modal.html' with modal_id="addModal" %}
+    {% include 'modals/detail_modal.html' with modal_id="detailModal" %}
+    {% include 'modals/edit_modal.html' with modal_id="editModal" %}
+
+    {% include 'modals/delete_modal.html' with modal_id="deleteModal" %}
+    
+    <script src={% static 'js/form_equipamento.js' %}></script>
+    <script src={% static 'js/modals.js' %}></script>
+{% endblock %}
+

@@ -1,0 +1,14 @@
+{% extends './base_modal.html' %}
+
+{% block modal-title%}
+    Confirmar deleção
+{% endblock %}
+
+{% block modal-body%}
+    Tem certeza que deseja excluir este equipamento?
+{% endblock %}
+
+{% block modal-footer%}
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+    <button type="button" class="btn btn-danger" id="confirmDelete" data-bs-dismiss="modal">Excluir</button>
+{% endblock %}
