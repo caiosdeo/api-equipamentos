@@ -22,10 +22,10 @@ const showMessageModal = (type, message) => {
 
     if (type === 'Sucesso') {
         modalTitle.setAttribute('class', 'text-success');
-        modalTitle.innerHTML = '<i class="material-icons me-2">&#xE86C;</i>Sucesso';
+        modalTitle.innerHTML = '<i class="material-icons me-2">&#xE86C;</i><span>Sucesso</span>';
     } else {
         modalTitle.setAttribute('class', 'text-danger');
-        modalTitle.innerHTML = '<i class="material-icons me-2">&#xE000;</i>Erro';
+        modalTitle.innerHTML = '<i class="material-icons me-2">&#xE000;</i><span>Erro</span>';
     }
 
     const modalBody = document.getElementById('dynamicModalBody');

@@ -13,7 +13,9 @@ document.addEventListener("DOMContentLoaded", fetchEquipamentos);
 let currentPage = 1;
 const itemsPerPage = 10;
 
-    const displayTable = (data) => {
+const displayTable = (data) => {
+    data.reverse();
+
     const tableBody = document.querySelector("#equipamento-table tbody");
     tableBody.innerHTML = "";
 
