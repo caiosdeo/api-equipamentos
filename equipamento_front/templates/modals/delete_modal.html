@@ -5,10 +5,11 @@
 {% endblock %}
 
 {% block modal-body%}
+    <input type="text" id="equipamento_id" name="equipamento_id" hidden>
     Tem certeza que deseja excluir este equipamento?
 {% endblock %}
 
 {% block modal-footer%}
-    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-    <button type="button" class="btn btn-danger" id="confirmDelete" data-bs-dismiss="modal">Excluir</button>
+    <input type="button" class="btn btn-secondary" data-bs-dismiss="modal" value="Cancelar">
+    <input type="submit" class="btn btn-danger" value="Excluir">
 {% endblock %}

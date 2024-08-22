@@ -26,6 +26,10 @@ senha: admin
 
 Aplicação resposável pelo front-end, onde estão definidos os templates e os scripts de interação com a API.
 
+## Pré-requisito
+
+Ter instalado no mínimo a versão 3.10.12 do Python.
+
 ## Instalação
 
 1. Clone o repositório: 
@@ -33,7 +37,12 @@ Aplicação resposável pelo front-end, onde estão definidos os templates e os 
 git clone https://github.com/caiosdeo/api-equipamentos.git
 ```
 
-2. No diretório onde o repositório foi clonado, crie e ative um ambiente virtual
+2. Entre no repositório clonado
+```sh
+cd api-equipamentos/
+```
+
+3. Crie e ative um ambiente virtual. 
 ```sh
 python3 -m venv equips_api_venv
 
@@ -44,20 +53,61 @@ source equips_api_venv/bin/activate
 equips_api_venv\Scripts\activate
 ```
 
-3. Instale as dependências
+Se preferir, use o *conda* para criar o ambiente, lembrando de usar a versão mínima de 3.10.12 do Python.
+```sh
+conda create --name equips_api_venv python=3.10
+
+conda activate equips_api_venv
+```
+
+4. Instale as dependências
 ```sh
 pip install -r requirements.txt
 ```
 
-4. Inicie o servidor
+5. Inicie o servidor
 ```sh
 python3 manage.py runserver
 ```
 
-5. Acesse a aplicação com a URL fornecida na saída do comando anterior
+6. Acesse a aplicação com a URL fornecida na saída do comando anterior
 ```sh
 Starting development server at http://127.0.0.1:8000/
 ```
+
+### Banco de dados
+
+Já existe um banco de dados de modelo junto com o repositório, `db.sqlite3`.
+Ele contém 17 registros de equipamentos diversos.
+Caso queira utilizar um banco vazio, é só remover o atual do diretório, movendo ou excluindo e criar um novo.
+
+1. Remova o banco de dados existente
+```sh
+rm db.sqlite3
+```
+
+2. Crie um novo banco
+```sh
+python3 manage.py migrate
+```
+
+3. Crie um novo superuser, caso queira usar o painel de administrador
+```sh
+python3 manage.py createsuperuser
+
+# Username
+admin
+# Email address
+pressione Enter
+# Password
+admin
+# Password (again)
+admin
+# Bypass
+Y
+```
+
+Feito isso, só executar os passos anteriores a partir do 5.
 
 ### Painel de Admin
 

@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    color: #566787;
+    background-color: #ebe2db !important;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 13px;
+}
+
+.content {
+    flex: 1; 
+}
+
+.container {
+    padding: 20px;
+}
+
+.footer {
+    color: #000;
+    text-align: center;
+    padding: 10px;
+}

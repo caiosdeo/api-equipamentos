@@ -5,5 +5,10 @@
 {% endblock %}
 
 {% block modal-body%}
-    {% include 'partials/_form.html' with form_id="edit-equipamento-form"%}
+    {% include 'partials/_form_fields.html' %}
+{% endblock %}
+
+{% block modal-footer%}
+    <input type="button" class="btn btn-secondary" data-bs-dismiss="modal" value="Cancelar">
+    <input type="submit" class="btn btn-primary" value="Salvar">
 {% endblock %}

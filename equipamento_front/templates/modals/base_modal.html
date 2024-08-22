@@ -1,21 +1,23 @@
-<div class="modal fade" id="{{ modal_id }}" tabindex="-1" aria-labelledby="{{modal_id}}Label" aria-hidden="true">
+<div class="modal fade" id="{{ modal_id }}">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="{{modal_id}}Label">
-                    {% block modal-title%}
+            <form id="{{ form_id }}">
+                <div class="modal-header">
+                    <h4 class="modal-title">
+                        {% block modal-title%}
+                        {% endblock %}
+                    </h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" onclick="cleanForm('{{ modal_id }}')"></button>
+                </div>
+                <div class="modal-body">
+                    {% block modal-body%}
                     {% endblock %}
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                {% block modal-body%}
-                {% endblock %}
-            </div>
-            <div class="modal-footer">
-                {% block modal-footer%}
-                {% endblock %}
-            </div>
+                </div>
+                <div class="modal-footer">
+                    {% block modal-footer%}
+                    {% endblock %}
+                </div>
+            </form>
         </div>
     </div>
 </div>

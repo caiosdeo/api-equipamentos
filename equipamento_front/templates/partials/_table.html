@@ -1,24 +1,35 @@
 {% load static %}
+<div class="table-wrapper">
+    <div class="table-title">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>Gerenciar <b>Equipamentos</b></h2>
+            </div>
+            <div class="col-sm-6">
+                <a href="#addModal" class="btn btn-success" data-bs-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Adicionar Novo Equipamento</span></a>
+            </div>
+        </div>
+    </div>
 
-<h3>Equipamentos</h3>
-<table class="table table-bordered" id="equipamento-table">
-    <thead>
-        <tr>
-            <th class="text-center">ID</th>
-            <th class="text-center">Tipo</th>
-            <th class="text-center">Fabricante</th>
-            <th class="text-center">Modelo</th>
-            <th class="text-center">Ações</th>
-        </tr>
-    </thead>
-    <tbody>
-    </tbody>
-</table>
+    <table class="table table-bordered table-striped table-hover" id="equipamento-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tipo</th>
+                <th>Fabricante</th>
+                <th>Modelo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
 
 <div id="pagination-controls" class="text-center mt-3">
-    <button id="prev-page" class="btn btn-secondary" disabled>Anterior</button>
+    <button id="prev-page" class="btn btn-outline-secondary" disabled>&lt;</button>
     <span id="page-info"></span>
-    <button id="next-page" class="btn btn-secondary">Próximo</button>
+    <button id="next-page" class="btn btn-outline-secondary">&gt;</button>
 </div>
 
 <script src={% static 'js/list_equipamentos.js' %}></script>
